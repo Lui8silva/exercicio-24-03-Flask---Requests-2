@@ -18,7 +18,7 @@ def inicio():
   todos.append({'name': nome, 'email': email, 'phone': tel})
   return redirect('/')
 
-@app.route('/delete/<int:index>')
+@app.route('/delete/<int:index>', methods=['POST'])
 def delete(index):
   todos.pop(index)
   return redirect('/')
