@@ -18,7 +18,7 @@ def inicio():
   contacts.append({'name': nome, 'email': email, 'phone': tel})
   return redirect('/')
 
-@app.route('/delete/<int:index>', methods=['POST'])
+@app.route('/delete/<int:index>')
 def delete(index):
   contacts.pop(index)
   return redirect('/')
